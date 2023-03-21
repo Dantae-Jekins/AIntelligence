@@ -1,13 +1,13 @@
 # Gradient Descent
-[English](#lang_en)
 
-[Português](#lang_pt)
+<a name="start"></a> 
+[English](#lang_en) $\cdot$ [Português](#lang_pt)
 
 <br>
 <hr>
 
-<a name="lang_pt"></a>
-
+<a name="lang_pt"></a> 
+### Seção Português $\cdot$ [Início](#start)
 ## Gradiente
 
 Antes de explicarmos o que é a técnica de descida gradiente, é melhor explicar (de forma rudimentar e curta) o que é o gradiente primeiro: Um gradiente de uma função $f(x_1, x_2, ... , x_n)$ é o vetor formado pelas derivadas parciais da função em relação a cada uma de suas variáveis, ou seja:
@@ -39,16 +39,26 @@ Seja $(x, y, R)_i$ (Vale a pena mencionar que quase todo problema possui muitas 
 
 $$ERR(f(x_i, y_i), R_i)$$
 
-Então para $i$ dados que temos, calculamos a diferença entre o estimado e o real com alguma função de erro. E o **objetivo é reduzir este erro**, ou seja, 'tratamos' o erro como uma função no seguinte formato (Forçando muito): $ERR(a, b)$ já que são os coeficientes de $f(x, y)$ que precisamos alterar para aproximar a função dos valores reais, e chegamos à um algoritmo iterativo:
+Então para $i$ dados que temos, calculamos a diferença entre o estimado e o real com alguma função de erro. O **objetivo é reduzir este erro**, ou seja, 'tratamos' o erro como uma função no seguinte formato (Forçando muito): $ERR(a, b)$ já que são os coeficientes de $f(x, y)$ que precisamos alterar para aproximar a função dos valores reais, e chegamos à um algoritmo iterativo:
 
-Assumimos coeficientes $A = \{a_0, a_1, ..., a_n\}$ iniciais, e para cada iteração, aplicamos o sentido negativo do gradiente de $ERR$ aos coeficientes:
+> Assumimos coeficientes $A = \{a_0, a_1, ..., a_n\}$ iniciais, e para cada iteração, aplicamos o sentido negativo do gradiente de $ERR$ aos coeficientes:
 
-$$ A \leftarrow A - \Delta ERR$$
+$$ A \leftarrow A - \Delta ERR $$
+
+> Porém a variação pode ser muito extrema então aplicamos um outro coeficiente $\lambda < 1$ no gradiente para reduzir esta alteração, e ainda apresentamos uma outra sintaxe da atribuição acima:
+
+$$ a_i \leftarrow a_i - \lambda \cdot \frac{\partial ERR}{\partial a_i}$$
+
+
+
+
 
 <br>
 <hr> 
 
 <a name="lang_en"></a>
+
+### English Section $\cdot$ [Start](#start)
 
 ## Gradient 
 
@@ -66,3 +76,24 @@ So knowing about derivatives (Differential calculus) is crucial to understand th
 Seeing how we can extract the gradient of a function, it's important to know that it's also a direction (after all, it's a vector); If we imagine a tridimensional situation $f(x,y) = z$, the gradient $\Delta f$ is going to be a bidimensional vector on the graph $(x,y,z)$ (it's going to make sense on the following declaration) and **this vector is going to be an indicator of the direction $(x,y)$ that $z$ varies the most, while also representing the intensity of variation with it's norm**, this concept is probably the most important to know about the understanding of the gradient descent.
 
 ## Gradient Descent
+
+The gradient descent's an aplication of what we have presented above, used mainly in computing at machine learning.
+
+> Firstly, let $f(x,y) = z$, we highlight that the gradient $(\frac{\partial f}{ \partial x}, \frac{\partial f}{\partial y})$ in a point $(x,y)$ represents a direction where $z$ varies the most, that is if we follow the direction in a positive sense, tendency is that $z$ increases, and if we follow the direction in a negative sense, tendency is that $z$ decreases. Maybe for a few the idea of "following" turned out to be ambiguous because we haven't defined it, so we'll define "follow a direction and sense" as applying the vector (gradient) to the point $(x,y)$ so that $z$ increases or decreases on the next calculation.
+
+So, how come a gradient can be so useful in the training of a classifier? Well, we need to define a "estimation function" and a "error function", the estimative is a function that recieves the data as variables and returns values that can be classified in the most correct manner, while the error function amounts the difference between real values and estimated values. The gradient descent is inserted in this context as a technique on the training of the coeficients of the estimation function, and if it wasn't clear enough, the coeficients are values that multiply the variables, like $a$ and $b$ in the function $f(a, b) = ax + by$. And how are the coeficients trained? That's where the error function comes in.
+
+Let $(x, y, R)_i$ (Worth noting that almost all problems have way more variables than only $x$ and $y$) be our set of data and $f(x, y)$ our estimation function with coeficients $a$ and $b$, let's call our error function ERR:
+
+$$ERR(f(x_i, y_i), R_i)$$
+
+So for an $i$ amount of data, we calculate the difference between the estimated and the real with some sort of error function. The **objective is to decrease this error**, that is, we 'treat' the error as a function with the following caracteristics: $ERR(a, b)$ since it's the coeficients from $f(x, y)$ that we need to change to reduce our error, and we get to the following iterative algorithm:
+
+> We assume initial coeficients $A = \{a_0, a_1, ..., a_n\}$, and for each iteration, we apply the negative sense of the $ERR$'s gradient to the coeficients:
+
+$$ A \leftarrow A - \Delta ERR $$
+
+> But the variation could be too extreme so we apply another coeficient we'll call $\lambda < 1$ on the gradient to reduce this variation, and on top of that we'll also denote another syntax of the algorithm:
+
+$$ a_i \leftarrow a_i - \lambda \cdot \frac{\partial ERR}{\partial a_i}$$
+
