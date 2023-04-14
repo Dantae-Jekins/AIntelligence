@@ -17,7 +17,7 @@ Um algoritmo de classificação pode ser manualmente produzido, mas o objetivo d
 
 ## Adendo
 
-    Vale a pena ressaltar que realizar isto requer um grande conjunto de dados para o treinamento, e que a implementação do treinamento de classificadores já foi facilitada em grandezas absurdas, por isso apresentamos a existência tanto da visão matemática e técnica do assunto, programando as funções e o treinamento de maneira manual, quanto a existência de uma implementação leiga básica utilizando-se de funções prontas.
+Vale a pena ressaltar que realizar isto requer um grande conjunto de dados para o treinamento, e que a implementação do treinamento de classificadores já foi facilitada em grandezas absurdas, por isso apresentamos a existência tanto da visão matemática e técnica do assunto, programando as funções e o treinamento de maneira manual, quanto a existência de uma implementação leiga básica utilizando-se de funções prontas.
 
 
 <br>
@@ -34,5 +34,5 @@ A classifier algorithm can be developed manually, but the objective of this sect
 
 ## Note
 
-    It's important to note that to achieve a satisfactory result we need a huge set of data for the training, and that the overall implementation has been simplified to an absurd degree. That said, we'll present a more technical and mathematical vision of what happens, programming the functions and training manually, and we'll also present the more simple vision of a basic implementation by using pre-made functions from libraries.
+It's important to note that to achieve a satisfactory result we need a huge set of data for the training, and that the overall implementation has been simplified to an absurd degree. That said, we'll present a more technical and mathematical vision of what happens, programming the functions and training manually, and we'll also present the more simple vision of a basic implementation by using pre-made functions from libraries.
 
