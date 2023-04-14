@@ -16,6 +16,7 @@ Classificadores são algoritmos que recebem um conjunto de dados e classificam e
 Um algoritmo de classificação pode ser manualmente produzido, mas o objetivo desta seção é explicar como isto é alcançado de maneira automática, ou semi-automática, atravéz de aprendizado de máquina. 
 
 ## Adendo
+
     Vale a pena ressaltar que realizar isto requer um grande conjunto de dados para o treinamento, e que a implementação do treinamento de classificadores já foi facilitada em grandezas absurdas, por isso apresentamos a existência tanto da visão matemática e técnica do assunto, programando as funções e o treinamento de maneira manual, quanto a existência de uma implementação leiga básica utilizando-se de funções prontas.
 
 
@@ -32,5 +33,6 @@ Classifiers are algorithms that receive a set of data and classify such data acc
 A classifier algorithm can be developed manually, but the objective of this section is to explain how this is achieved automatically or semi-automatically through machine-learning.
 
 ## Note
+
     It's important to note that to achieve a satisfactory result we need a huge set of data for the training, and that the overall implementation has been simplified to an absurd degree. That said, we'll present a more technical and mathematical vision of what happens, programming the functions and training manually, and we'll also present the more simple vision of a basic implementation by using pre-made functions from libraries.
 
