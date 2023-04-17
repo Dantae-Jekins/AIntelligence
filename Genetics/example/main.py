@@ -108,6 +108,6 @@ print("Rota: ", end="")
 aux=0
 for city in max_individuo.cidades:
   print(city.nome, " ")
-  aux+=1
   if city.nome == "E" and aux > 0:
     break
+  aux+=1
