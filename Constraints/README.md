@@ -3,6 +3,10 @@
 <a name="start"></a> 
 [English](#lang_en) $\cdot$ [Português](#lang_pt)
 
+Enquanto não há implementação, interprete $\sub$ como subconjunto.
+
+While there is no implementation, interpret $\sub$ as subset.
+
 <br>
 <hr>
 
