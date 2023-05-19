@@ -67,7 +67,7 @@ while counter < max_iters and stalemate < (max_stale*4):
       popaux.mutacao()
       i += 1
       if i > 10:
-        break;
+        break
 
     popauxfit = popaux.fitness()
     if popauxfit > pop1fit:

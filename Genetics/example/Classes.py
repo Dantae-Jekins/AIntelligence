@@ -1,8 +1,5 @@
 import numpy as np;
 
-GERACOES_MAX = 100000
-ERRO_MIN = 0.1
-
 class Populacao:
   def __init__(self, length):
     self.individuos = np.array(dtype = Individuo);

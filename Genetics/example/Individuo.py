@@ -68,7 +68,7 @@ class Rota(Individuo):
       if (cidade_prox.nome == "E"):
         break
 
-    if Tempo > 72:
+    if Tempo > 72: #hardcoded
       auxTempo = Tempo - 72
       Valor -= self.valor_max * auxTempo
 
